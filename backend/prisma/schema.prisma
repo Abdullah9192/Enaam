@@ -1,0 +1,161 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id                    String               @id @default(uuid()) // Primary key
+  name                  String
+  email                 String               @unique
+  password              String
+  phoneNumber           String?              @unique
+  createdAt             DateTime             @default(now())
+  updatedAt             DateTime             @updatedAt
+  userRoles             UserRole[]
+  orders                Order[]
+  shoppingCart          ShoppingCart?
+
+  ambassadorReferrals   AmbassadorReferral[]  @relation("AmbassadorToReferral")
+  referredReferrals     AmbassadorReferral[]  @relation("ReferredUserToReferral")
+}
+
+model Role {
+  id                    Int         @id @default(autoincrement()) // Primary key
+  name                  String      @unique                       // Role name must be unique
+  createdAt             DateTime    @default(now())
+  updatedAt             DateTime    @updatedAt
+  userRoles             UserRole[]  // Relation to the junction table
+  rolePermissions       RolePermission[]
+}
+
+model Permission {
+  id                    Int         @id @default(autoincrement()) // Primary key
+  name                  String      @unique                       // Permission name, e.g., "view_users"
+  description           String?     // Optional description for the permission
+  createdAt             DateTime    @default(now())
+  updatedAt             DateTime    @updatedAt
+  rolePermissions       RolePermission[]
+}
+
+model RolePermission {
+  roleId                Int
+  permissionId          Int
+
+  role        Role             @relation(fields: [roleId], references: [id])
+  permission  Permission       @relation(fields: [permissionId], references: [id])
+
+  @@id([roleId, permissionId])
+  @@unique([roleId, permissionId])
+}
+
+model UserRole {
+  user                  User      @relation(fields: [userId], references: [id])
+  userId                String  
+  role                  Role      @relation(fields: [roleId], references: [id]) 
+  roleId                Int     
+  assignedAt            DateTime  @default(now()) // Date when the role was assigned
+
+  @@id([userId, roleId]) 
+}
+
+model AmbassadorReferral {
+  id                    String   @id @default(uuid()) // Primary key
+  ambassadorId          String   
+  ambassador            User     @relation("AmbassadorToReferral", fields: [ambassadorId], references: [id])
+  referredUserId        String   
+  referredUser          User     @relation("ReferredUserToReferral", fields: [referredUserId], references: [id]) 
+  createdAt             DateTime @default(now()) 
+
+  @@unique([ambassadorId, referredUserId]) 
+}
+
+model Question {
+  id                    String   @id @default(uuid()) // Primary key
+  question              String   
+  option1               String   
+  option2               String   
+  option3               String   
+  option4               String   
+  correctAnswer         String 
+  createdAt             DateTime @default(now()) // Timestamp for creation
+  updatedAt             DateTime @updatedAt      // Timestamp for updates
+}
+
+model Reward {
+  id                    String   @id @default(uuid()) // Primary key
+  name                  String
+  description           String
+  image                 String?  // Optional field
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+  tickets               Ticket[] 
+}
+
+model Ticket {
+  id                    String   @id @default(uuid()) // Primary key
+  name                  String
+  image                 String?
+  description           String
+  soldTickets           Int
+  totalTickets          Int
+  remainingTickets      Int
+  rewardId              String
+  reward                Reward   @relation(fields: [rewardId], references: [id]) // Relation to Reward
+  price                 Float    // Price of the ticket
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}
+
+model Offer {
+  id                     String   @id @default(uuid())   // Primary key
+  title                  String
+  image                  String
+  description            String
+  offerType              String  
+  durationInUTC          String
+  originalDuration       String
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+}
+
+
+model Order {
+  id                   String   @id @default(cuid()) // Primary key
+  name                 String
+  email                String
+  phoneNumber          String
+  quantity             Int
+  referralCode         String?
+  price                Float
+  date                 DateTime @default(now()) // Automatically adds the current date
+  invoiceId            String
+  productName          String
+  createdAt            DateTime @default(now())
+  rewardName           String
+  answer               String
+  ticketId             String[] // Array of IDs, dynamically generated based on quantity
+  userId               String   // Foreign key for User
+  user                 User     @relation(fields: [userId], references: [id]) // Relation
+}
+
+model ShoppingCart {
+  id                    String   @id @default(cuid())  // Use 'id' as primary key
+  userId                String   @unique
+  cartItems             Json     // Array of subcarts with details (name, description, image, quantity)
+  total                 Float    // Total price of the cart
+  subTotal              Float    // Subtotal before discounts or taxes
+  updatedAt             DateTime @updatedAt // Automatically updates the date when the cart is updated
+  user                  User     @relation(fields: [userId], references: [id])  // Relation to User
+}
+
+model Winner {
+  id      String  @id @default(cuid())
+  userid  String
+  name    String
+  reward  String
+  image   String
+}

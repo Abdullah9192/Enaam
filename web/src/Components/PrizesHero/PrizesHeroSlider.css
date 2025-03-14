@@ -1,0 +1,22 @@
+.prizes-slider{
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+}
+.slide-bg{
+    background: linear-gradient(90deg, rgba(54,66,174,1) 0%, rgba(0,0,104,1) 50%, rgba(13,26,74,1) 100%) !important;
+    border-radius: 15px;
+}
+.deals-bg{
+    background: #F7CC60 !important;
+    border-radius: 15px;
+    height: 100%;
+}
+.deals-title{
+    color: #fff;
+    font-size: 26;
+    font-weight: 700;
+}
+.swiper-button-prev, .swiper-button-next{
+    color: #fff;
+}

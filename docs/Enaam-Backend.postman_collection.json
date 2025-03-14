@@ -1,0 +1,415 @@
+{
+	"info": {
+		"_postman_id": "d0252aff-a30b-4938-be10-1b8f925a91d1",
+		"name": "Enaam-Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38086119",
+		"_collection_link": "https://lunar-star-122343.postman.co/workspace/8fba7f5a-4ecb-40e2-8515-96ee7db75f8c/collection/25108218-d0252aff-a30b-4938-be10-1b8f925a91d1?action=share&source=collection_link&creator=38086119"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Product Creation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\":100,\r\n    \"name\":\"a\",\r\n    \"description\":\"a\",\r\n    \"image\":\"a\",\r\n    \"quantity\":10,\r\n    \"rewardId\":\"af6061d8-639c-4be3-ac82-5edfcbb4ca1f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/product"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/product"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Products",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\":\"100\",\r\n    \"name\":\"\",\r\n    \"description\":\"\",\r\n    \"image\":\"\",\r\n    \"quantity\":\"\",\r\n    \"reward\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/product/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Products",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{URL}}/product/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rewards",
+			"item": [
+				{
+					"name": "Reward Creation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"a\",\r\n    \"description\":\"a\",\r\n    \"image\":\"a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/reward"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Rewards",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/reward"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Reward",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"\",\r\n    \"description\":\"\",\r\n    \"image\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/reward/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Reward",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{URL}}/reward/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{URL}}/users/a786f6df-f70b-4e55-ae33-706d76d4d0db"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Testupdate\",\r\n  \"phoneNo\": 1234567880\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/users/0d368fe6-8585-4d89-b61f-6fdb8c2baa5b"
+					},
+					"response": []
+				},
+				{
+					"name": "User creation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Test\",\r\n  \"phoneNo\": 1234567890,\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"secret123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@example.com\",\r\n    \"password\":\"secret123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/users/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/users/0d368fe6-8585-4d89-b61f-6fdb8c2baa5b"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Questions",
+			"item": [
+				{
+					"name": "Question Creation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\":\"abcd\",\r\n    \"option1\":\"a\",\r\n    \"option2\":\"b\",\r\n    \"option3\":\"c\",\r\n    \"option4\":\"d\",\r\n    \"correctAnswer\":\"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/question"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Question",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\":\"e\",\r\n    \"optionA\":\"f\",\r\n    \"optionB\":\"g\",\r\n    \"optionC\":\"h\",\r\n    \"optionD\":\"i\",\r\n    \"correctAnswer\":\"B\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/question/e4b7ec5b-6814-466b-869e-2ce86b23308d"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Question",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{URL}}/question/e4b7ec5b-6814-466b-869e-2ce86b23308d"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Questions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/question"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order/Invoice",
+			"item": [
+				{
+					"name": "Creation Ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Jane Doe\",\r\n  \"email\": \"jane.doe@example.com\",\r\n  \"phone\": \"9876543210\",\r\n  \"quantity\": 3,\r\n  \"price\": 150.00,\r\n  \"productName\":\"bike\",\r\n  \"rewardName\":\"bike\",\r\n  \"answer\":\"yes\",\r\n  \"userId\":\"771f6fbe-b824-46b0-b94c-69876413823a\",\r\n  \"ticketId\":\"6f197131-d076-4c8f-bd17-b50f6bec16c5\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/order"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Ticket or Invoices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/order"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ticket or Invoice by userId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/order/771f6fbe-b824-46b0-b94c-69876413823a"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Assign Role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleId\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/role/771f6fbe-b824-46b0-b94c-69876413823a"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/role/771f6fbe-b824-46b0-b94c-69876413823a"
+					},
+					"response": []
+				},
+				{
+					"name": "Creation of Role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ambassador\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/role"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/role"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Create Cart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cartItems\": [\r\n    {\r\n      \"name\": \"Product 1\",\r\n      \"description\": \"Description of product 1\",\r\n      \"image\": \"http://example.com/product1.jpg\",\r\n      \"quantity\": 2\r\n    },\r\n    {\r\n      \"name\": \"Product 2\",\r\n      \"description\": \"Description of product 2\",\r\n      \"image\": \"http://example.com/product2.jpg\",\r\n      \"quantity\": 1\r\n    }\r\n  ],\r\n  \"total\": 200.0,\r\n  \"subTotal\": 180.0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/cart/771f6fbe-b824-46b0-b94c-69876413823a"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cart by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/cart/771f6fbe-b824-46b0-b94c-69876413823a"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

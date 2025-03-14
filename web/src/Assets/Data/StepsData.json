@@ -1,0 +1,24 @@
+{
+    "steps": [
+        {
+            "step": 1,
+            "title": "Register"
+        },
+        {
+            "step": 2,
+            "title": "Browse Prizes"
+        },
+        {
+            "step": 3,
+            "title": "Choose your favourite item to win"
+        },
+        {
+            "step": 4,
+            "title": "Answer a simple questions & pay competition entry fee"
+        },
+        {
+            "step": 5,
+            "title": "Wait for lucky draw & get a chance to win"
+        }
+    ]
+}

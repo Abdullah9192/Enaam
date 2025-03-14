@@ -1,0 +1,45 @@
+[
+    {
+      "title": "Summer Camp 2024",
+      "starting_date": "2024-06-01",
+      "ending_date": "2024-06-30",
+      "description": "An exciting summer camp filled with adventure, learning, and fun activities for kids aged 10-15.",
+      "image": "https://example.com/images/summer_camp.jpg"
+    },
+    {
+      "title": "Art Exhibition: Colors of Nature",
+      "starting_date": "2024-07-15",
+      "ending_date": "2024-08-15",
+      "description": "A mesmerizing exhibition showcasing the best of nature-inspired art by renowned artists.",
+      "image": "https://example.com/images/art_exhibition.jpg"
+    },
+    {
+      "title": "Tech Conference 2024",
+      "starting_date": "2024-09-10",
+      "ending_date": "2024-09-12",
+      "description": "Join industry leaders and tech enthusiasts for insightful talks and networking opportunities.",
+      "image": "https://example.com/images/tech_conference.jpg"
+    },
+    {
+      "title": "Summer Camp 2024",
+      "starting_date": "2024-06-01",
+      "ending_date": "2024-06-30",
+      "description": "An exciting summer camp filled with adventure, learning, and fun activities for kids aged 10-15.",
+      "image": "https://example.com/images/summer_camp.jpg"
+    },
+    {
+      "title": "Art Exhibition: Colors of Nature",
+      "starting_date": "2024-07-15",
+      "ending_date": "2024-08-15",
+      "description": "A mesmerizing exhibition showcasing the best of nature-inspired art by renowned artists.",
+      "image": "https://example.com/images/art_exhibition.jpg"
+    },
+    {
+      "title": "Tech Conference 2024",
+      "starting_date": "2024-09-10",
+      "ending_date": "2024-09-12",
+      "description": "Join industry leaders and tech enthusiasts for insightful talks and networking opportunities.",
+      "image": "https://example.com/images/tech_conference.jpg"
+    }
+  ]
+  

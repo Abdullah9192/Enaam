@@ -1,0 +1,64 @@
+{
+    "products": [
+        {
+            "id": 1321,
+            "title": "Product 1",
+            "price": 100,
+            "seller": "Seller A",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum dicta perspiciatis molestias veritatis laboriosam qui quod, omnis ipsa odit deserunt, tempore ad nostrum provident fugiat vero eligendi ab aut eaque.",
+            "competitors": 3621,
+            "total": 5000,
+            "quantity": 1
+        },
+        {
+            "id": 2321,
+            "title": "Product 2",
+            "price": 100,
+            "seller": "Seller B",
+            "description": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum dicta perspiciatis molestias veritatis laboriosam qui quod, omnis ipsa odit deserunt, tempore ad nostrum provident fugiat vero eligendi ab aut eaque.This is the description for Product 2.",
+            "competitors": 1233,
+            "total": 5000,
+            "quantity": 1
+        },
+        {
+            "id": 3321,
+            "title": "Product 3",
+            "price": 100,
+            "seller": "Seller C",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum dicta perspiciatis molestias veritatis laboriosam qui quod, omnis ipsa odit deserunt, tempore ad nostrum provident fugiat vero eligendi ab aut eaque. This is the description for Product 3.",
+            "competitors": 112,
+            "total": 5000,
+            "quantity": 1
+        },
+        {
+            "id": 4312,
+            "title": "Product 4",
+            "price": 100,
+            "seller": "Seller D",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum dicta perspiciatis molestias veritatis laboriosam qui quod, omnis ipsa odit deserunt, tempore ad nostrum provident fugiat vero eligendi ab aut eaque. This is the description for Product 4.",
+            "competitors": 4500,
+            "total": 5000,
+            "quantity": 1
+        },
+        {
+            "id": 5312,
+            "title": "Product 5",
+            "price": 100,
+            "seller": "Seller E",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum dicta perspiciatis molestias veritatis laboriosam qui quod, omnis ipsa odit deserunt, tempore ad nostrum provident fugiat vero eligendi ab aut eaque. This is the description for Product 5.",
+            "competitors": 2221,
+            "total": 5000,
+            "quantity": 1
+        },
+        {
+            "id": 6312,
+            "title": "Product 6",
+            "price": 100,
+            "seller": "Seller F",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum dicta perspiciatis molestias veritatis laboriosam qui quod, omnis ipsa odit deserunt, tempore ad nostrum provident fugiat vero eligendi ab aut eaque. This is the description for Product 6.",
+            "competitors": 1200,
+            "total": 5000,
+            "quantity": 1
+        }
+    ]
+}
